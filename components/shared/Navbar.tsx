@@ -2,8 +2,8 @@ import Link from "next/link";
 import { buttonVariants } from "../ui/Button";
 const Navbar = () => {
   return (
-    <header className="h-20 border-b border-gray flex items-center bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-[100]">
-      <div className="wrapper grid grid-cols-3 gap-20 items-center">
+    <header className="fixed left-0 right-0 top-0 z-[100] flex h-20 items-center border-b border-gray bg-white/80 backdrop-blur-lg">
+      <div className="wrapper grid grid-cols-3 items-center gap-20">
         {/* LEFT NAV */}
         <nav>
           <ul className="flex gap-5">
@@ -28,7 +28,7 @@ const Navbar = () => {
         <nav>
           <ul className="flex justify-center">
             <li>
-              <Link className="text-4xl lowercase font-bold text-pink" href="/">
+              <Link className="text-4xl font-bold lowercase text-pink" href="/">
                 Mimosa
               </Link>
             </li>
@@ -36,7 +36,7 @@ const Navbar = () => {
         </nav>
         {/* RIGHT NAV */}
         <nav>
-          <ul className="flex gap-5 justify-end items-center">
+          <ul className="flex items-center justify-end gap-5">
             <li>
               <Link className="link-item" href="/">
                 Link4
