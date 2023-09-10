@@ -18,8 +18,22 @@ const Packages = () => {
               <PackageItem key={item.id} {...item} />
             ))}
         </div>
-        <div className=''></div>
-        <div className=''></div>
+        {/* Beauty */}
+        <div className='grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
+          {data
+            .filter((item: any) => item.masterCategory === 'Beauty')
+            .map((item: any) => (
+              <PackageItem key={item.id} {...item} />
+            ))}
+        </div>
+        {/* Events */}
+        <div className='grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4'>
+          {data
+            .filter((item: any) => item.masterCategory === 'Events')
+            .map((item: any) => (
+              <PackageItem key={item.id} {...item} />
+            ))}
+        </div>
       </HorizontalTab>
     </section>
   );
